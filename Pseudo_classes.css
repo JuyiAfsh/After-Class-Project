@@ -1,0 +1,54 @@
+body {
+    font-family: 'Monospace' , serif;
+    background-color: aquamarine;
+    color: black;
+}
+
+h1 {
+    color: navy;
+}
+
+h1 + p {
+    background-color: grey;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+ul > li {
+    font-weight: bold;
+}
+
+ul li:nth-child(1) {
+    background-color: lightgreen;
+    color: darkcyan;
+}
+
+ul li:hover {
+    color: white;
+}
+
+p:not(:first-of-type) {
+    text-decoration: overline underline;
+}
+
+ul li::before {
+    content: "🐙";
+}
+
+p::first-letter {
+    font-size: 175%;
+    color: darkred;
+}
+
+a {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+a:hover {
+    color:blue;
+}
+
+a::before {
+    content: "🌊"
+}
