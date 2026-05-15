@@ -1,0 +1,13 @@
+#read::before {
+content: "📖";
+}
+#crochet::before {
+    content: "🧶";
+}
+#skip::before {
+    content: "🪢";
+}
+body {
+    background-image:"bgimage.jpeg";
+    background-color:aquamarine;
+}
