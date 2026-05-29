@@ -1,0 +1,9 @@
+.product {
+    width: 500px;
+    height: auto;
+    margin-bottom: 20px;
+}
+#myNavbar {
+    display: flex;
+    gap: 20px;
+}
