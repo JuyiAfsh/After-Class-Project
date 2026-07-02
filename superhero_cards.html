@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Superhero Cards </title>
+        <style>
+            body {
+                font-family: 'Courier New', Courier, monospace;
+                background: wheat;
+                padding: 20px;
+                text-align: center;
+            }
+            h1 { color: crimson;}
+            p { color: lightslategrey;}
+            .cards {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                margin-top: 25px;
+            }
+            .card {
+                background: lavenderblush;
+                border: 3px solid red;
+                border-radius: 12px;
+                padding: 10px;
+                width: 150px;
+                height: 100px;
+            }
+            .superhero-name {
+                font-size: 15px;
+                font-weight: bold;
+                color: black;
+            }
+            .superhero-power {
+                color: lightslategray;
+                margin-top: 10px;
+                font-size: 10px;
+            }
+            button {
+                background: palevioletred;
+                color: blanchedalmond;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 10px;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Superhero Cards</h1>
+        <p>Use a JavaScript class to show superhero powers!</p>
+        <button onclick="showPowers()">See Superhero's Powers!</button>
+        <div class="cards">
+            <div id="card1"></div>
+            <div id="card2"></div>
+            <div id="card3"></div>
+        </div>
+        <script>
+            class power {
+                constructor(name, power) {
+                this.name = name;
+                this.power = power
+                }
+                describe() {
+                    return this.name + ":" + this.power;
+                }
+            }
+
+            function showPowers() {
+                let p1 = new power("Spiderman","Web Powers")
+                let p2 = new power("Hulk", "Strength")
+                let p3 = new power("Iron Man","Transformation")
+
+                document.getElementById("card1").innerHTML = "<div class='card'><div class='superhero-name'>" + p1.name + "</div>" + "<div class='superhero-power'>" + p1.describe() + "</div></div>";
+                document.getElementById("card2").innerHTML = "<div class='card'><div class='superhero-name'>" + p2.name + "</div>" + "<div class='superhero-power'>" + p2.describe() + "</div></div>";
+                document.getElementById("card3").innerHTML = "<div class='card'><div class='superhero-name'>" + p3.name + "</div>" + "<div class='superhero-power'>" + p3.describe() + "</div></div>";
+            }   
+        </script>
+    </body>
+</html>
